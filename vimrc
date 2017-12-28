@@ -27,7 +27,7 @@ call vundle#begin()
     "-------------------=== Code/Project navigation ===-------------
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
     Plugin 'majutsushi/tagbar'                  " Class/module browser
-    Plugin 'ctrlpvim/ctrlp.vim'                 " Fast transitions on project files
+    Plugin 'vim/ctrlp.vim'                 " Fast transitions on project files
 
     "-------------------=== Other ===-------------------------------
     Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -242,3 +242,24 @@ let g:ycm_confirm_extra_conf=0
 
 nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+" ctrlp configure 
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_cmd = 'CtrlP'
+map <leader>f :CtrlPMRU<CR>
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
+    \ }
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=15
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+
+
+
