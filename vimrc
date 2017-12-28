@@ -42,7 +42,9 @@ call vundle#begin()
     Plugin 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
     Plugin 'tomtom/tlib_vim'                    " dependencies #2
     Plugin 'honza/vim-snippets'                 " snippets repo
-
+    "-------------------=== Snippets support ===--------------------
+    Plugin 'mileszs/ack.vim'                    " search ack ag
+    
     "-------------------=== Languages support ===-------------------
     Plugin 'tpope/vim-commentary'               " Comment stuff out
     Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
@@ -112,6 +114,7 @@ nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
 "=====================================================
 set incsearch	                            " incremental search
 set hlsearch	                            " highlight search results
+let g:ackprg = 'ag --nogroup --nocolor --column'    "display ag results
 
 "=====================================================
 "" AirLine settings
