@@ -10,6 +10,7 @@
 
 let $vimhome=fnamemodify(resolve(expand("~/.vimrc")), ':p:h')
 let $vundle=$vimhome."/bundle/Vundle.vim"
+let mapleader=","
 
 " Be iMproved
 set nocompatible
